@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Rabbit Hole — Underground Dining & Cocktails</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="rabbit-icon">&#9827;</div>
+      <p>Follow the rabbit...</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo"><img src="logo.png" alt="The Rabbit Hole" class="logo-img"></a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li class="dropdown">
+          <a href="#about">About <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+          <ul class="dropdown-menu">
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#press">Press</a></li>
+        <li><a href="#contact">Find Us</a></li>
+        <li><a href="#reservations" class="nav-cta">Reservations</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1600&q=80&fit=crop" alt="Underground bar atmosphere" class="hero-bg-img">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">COLORADO SPRINGS, COLORADO</p>
+      <h1>Colorado Springs'<br>Best-Kept Secret</h1>
+      <p class="hero-sub">Upscale New American cuisine and cocktails — waiting for you just beneath the Springs.</p>
+      <div class="hero-buttons">
+        <a href="#reservations" class="btn btn-primary">Reserve a Table</a>
+        <a href="#story" class="btn btn-outline">Our Story</a>
+      </div>
+    </div>
+    <div class="scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About / Story -->
+  <section class="story" id="story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-images reveal">
+          <div class="img-stack">
+            <div class="img-card img-card-1">
+              <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=800&q=80&fit=crop" alt="Bar with ambient lighting">
+            </div>
+            <div class="img-card img-card-2">
+              <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80&fit=crop" alt="Craft cocktail">
+            </div>
+          </div>
+        </div>
+        <div class="story-text reveal">
+          <p class="section-label">Our Story</p>
+          <h2>Experience Colorado Springs' Nightlife Underground</h2>
+          <p>Hidden beneath the bustling streets of downtown Colorado Springs lies a world unlike any other. The Rabbit Hole is an underground sanctuary where Wonderland-inspired ambiance meets upscale New American cuisine.</p>
+          <p>Descend the staircase and step into a realm of gothic elegance, flickering candlelight, and meticulously crafted cocktails. Every detail — from the velvet seating to the curated playlist — is designed to transport you somewhere extraordinary.</p>
+          <p>Open daily, we invite you to lose yourself in an experience that blurs the line between dinner and wonderland.</p>
+          <div class="story-stats">
+            <div class="stat">
+              <span class="stat-number" data-target="3">0</span>
+              <span class="stat-label">Gold Awards</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="2">0</span>
+              <span class="stat-label">Silver Awards</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="7">0</span>
+              <span class="stat-label">Days a Week</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Divider -->
+  <section class="parallax-divider parallax-1">
+    <div class="parallax-overlay"></div>
+    <blockquote class="parallax-quote reveal">
+      "If you've ever dreamed of following the white rabbit down a hole into the unknown, then this fantasy may not be too far out of reach."
+      <cite>— 303 Magazine</cite>
+    </blockquote>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">The Menu</p>
+        <h2>Curated for Wonderland</h2>
+      </div>
+
+      <div class="menu-tabs reveal">
+        <button class="tab active" data-tab="food">Food</button>
+        <button class="tab" data-tab="cocktails">Cocktails</button>
+        <button class="tab" data-tab="beer">Beer</button>
+        <button class="tab" data-tab="wine">Wine</button>
+        <button class="tab" data-tab="spirits">Spirits</button>
+      </div>
+
+      <!-- FOOD -->
+      <div class="menu-panel active" id="food">
+        <div class="card-flourish">
+          <span class="flourish-line"></span>
+          <span class="flourish-diamond"></span>
+          <span class="flourish-line"></span>
+        </div>
+        <div class="menu-columns">
+          <div class="menu-col reveal">
+            <h3 class="menu-category">Shareables &amp; Nibbles</h3>
+            <div class="menu-list">
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Meat and Cheese Nosh Board</span><span class="item-price">$28</span></div>
+                <p class="item-desc">Chef's Choice of Rotating Meats and Cheeses, Fresh Fruit, Strawberry Rhubarb Compote, Bourbon Mustard, Roasted Garlic Cloves, Crackers, Crostini <span class="item-tags">(GF by Request)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Frites</span><span class="item-price">$13</span></div>
+                <p class="item-desc">Parsley, Chile Rub, Chipotle Aioli <span class="item-tags">(GF, DF, Vegan by Request)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Brussels Sprouts</span><span class="item-price">$13</span></div>
+                <p class="item-desc">Red Pepper Vinaigrette, Toasted Pepitas <span class="item-tags">(DF, GF, Vegan by Request)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Crispy Risotto Cakes</span><span class="item-price">$13</span></div>
+                <p class="item-desc">Roasted Garlic, Tomato, Red Pepper, Herb Risotto, Red Pepper Tomato Pesto, Garlic Herb Aioli <span class="item-tags">(DF, GF, Vegan by Request)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Goat Cheese Balls (3)</span><span class="item-price">$13</span></div>
+                <p class="item-desc">Panko Crusted Goat Cheese Balls, Wild Baby Arugula, Strawberry Rhubarb Sauce, Hot Honey <span class="item-tags">(GF)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Whiskey Sticky Ribs</span><span class="item-price">$15</span></div>
+                <p class="item-desc">Braised Pork Ribs, Whiskey Soy Glaze, On a Bed of Cabbage <span class="item-tags">(DF, GF)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Bison Lettuce Wraps (3)</span><span class="item-price">$15</span></div>
+                <p class="item-desc">Shredded Bison, Tomatillo Aioli, Pineapple Salsa, Cabbage, Goat Cheese, Pickled Onions <span class="item-tags">(GF) (DF and Vegan by Request) — ADD a wrap +$4</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Chopped Salad</span><span class="item-price">$9</span></div>
+                <p class="item-desc">Local Greens, Cucumber, Corn, Tomato, Black Beans, Pickled Onion, Avocado, Pepper Jack Cheese, Tortilla Strips; Your Choice of Red Pepper Vinaigrette, Ranch, Bleu Cheese, or Italian Dressing <span class="item-tags">(GF) (DF and Vegan by Request)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Rabbit Hole Wild Game Chili</span><span class="item-price">$15</span></div>
+                <p class="item-desc">A Blend of Wild Game Meats, Pueblo Chile's, Bell Peppers, Beans, Tomato, Tomatillo Creme <span class="item-tags">(GF, DF)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Soup of the Day</span><span class="item-price">$7</span></div>
+                <p class="item-desc">Ask your Server</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Artisan Bread</span><span class="item-price">$6</span></div>
+                <p class="item-desc">Herb Crusted Bread, Whipped Butter</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Sides</span><span class="item-price">$7</span></div>
+                <p class="item-desc">Mashed Potatoes, Black Forbidden Rice, Roasted Carrots, Sauteed Broccolini, Roasted Asparagus, Brussels Sprouts, Sweet Potatoes, Sauteed Spinach</p>
+              </div>
+            </div>
+          </div>
+          <div class="menu-col reveal">
+            <h3 class="menu-category">Dinner</h3>
+            <div class="menu-list">
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Angus Ribeye*</span><span class="item-price">$42</span></div>
+                <p class="item-desc">Grilled Angus Ribeye, Red Wine Demi-Glace, Cowboy Butter, Garlic Mashed Potatoes, Roasted Asparagus <span class="item-tags">(GF) (DF by Request)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Filet Mignon*</span><span class="item-price">$42</span></div>
+                <p class="item-desc">Grilled Filet, Red Wine Demi-Glace, Cowboy Butter, Garlic Mashed Potatoes, Roasted Asparagus <span class="item-tags">(GF) (DF by Request)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Bison Short Ribs</span><span class="item-price">$32</span></div>
+                <p class="item-desc">Braised Bison, Cherry Demi-Glace, Garlic Mashed Potatoes, Roasted Carrots <span class="item-tags">(GF) (DF by Request)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Rabbit Meatloaf</span><span class="item-price">$28</span></div>
+                <p class="item-desc">Honey Cured Bacon Wrapped Meatloaf, With a Blend of Pork and Ground Rabbit with Honey Chipotle Demi-Glace, Garlic Mashed Potatoes, Roasted Carrots <span class="item-tags">(GF, DF by Request)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Chicken Cordon Bleu</span><span class="item-price">$32</span></div>
+                <p class="item-desc">Herb Panko Crusted Chicken, Smoked Gouda, Bacon Lardon, Smoked Ham, Whiskey Cream Sauce, Garlic Mashed Potatoes, Roasted Carrots <span class="item-tags">(GF)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Herb Crusted Baked Salmon</span><span class="item-price">$34</span></div>
+                <p class="item-desc">Lemon Beurre Blanc, Black Forbidden Rice, Broccolini <span class="item-tags">(GF) (DF by Request)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Truffle Mac n' Cheese</span><span class="item-price">$26 / GF $28</span></div>
+                <p class="item-desc">Choose Bacon Lardon or Broccolini — Mezze Maniche Pasta, Roasted Garlic, Smoked Gouda, Truffle Oil, Panko Topping <span class="item-tags">(Vegetarian and GF by Request)</span></p>
+              </div>
+            </div>
+
+            <h3 class="menu-category">Chef's Special</h3>
+            <div class="menu-list">
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Grilled Lamb Chops</span><span class="item-price">$44</span></div>
+                <p class="item-desc">(2) 6 oz. Marinated Grilled Lamb Chops, Roasted Rainbow Cauliflower, Parsnip Puree, Leek and Lemon Wild Rice Pilaf, Bourbon and Mustard Demi Glaze <span class="item-tags">(GF) (DF by Request)</span></p>
+              </div>
+            </div>
+
+            <h3 class="menu-category">Chef's Seasonal Entrees</h3>
+            <div class="menu-list">
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Duck Leg Confit</span><span class="item-price">$34</span></div>
+                <p class="item-desc">Strawberry Rhubarb Sauce, Black Forbidden Rice, Broccolini <span class="item-tags">(DF, GF)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Mediterranean Tofu Pasta</span><span class="item-price">$24</span></div>
+                <p class="item-desc">Orecchiette Pasta, Vegan Pesto, Grilled Marinated Tofu, Cherry Tomato, Spinach, Bell Peppers, Asparagus, Artichoke Hearts, Capers <span class="item-tags">(DF, Vegan) (GF by Request)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Tofu Hash</span><span class="item-price">$24</span></div>
+                <p class="item-desc">Crispy Tofu, Fried Veggies, Truffle Oil, Spinach, Pistachio Romesco, Broccolini, Pepitas <span class="item-tags">(DF, GF, Vegan)</span></p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Chopped Salad Entree</span><span class="item-price">$16</span></div>
+                <p class="item-desc">Local Greens, Cucumber, Corn, Tomato, Black Beans, Pickled Onion, Avocado, Pepper Jack Cheese, Tortilla Strips; Your Choice of Red Pepper Vinaigrette, Ranch, Bleu Cheese, or Italian Dressing <span class="item-tags">(GF) (DF and Vegan by Request)</span></p>
+              </div>
+            </div>
+
+            <h3 class="menu-category">Entree Add Ons</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Beef Filet*</span><span class="item-price">$28</span></div>
+              <div class="menu-row"><span class="item-name">Salmon</span><span class="item-price">$17</span></div>
+              <div class="menu-row"><span class="item-name">Shredded Bison</span><span class="item-price">$15</span></div>
+              <div class="menu-row"><span class="item-name">Sauteed Shrimp (5)</span><span class="item-price">$13</span></div>
+              <div class="menu-row"><span class="item-name">Crispy Tofu</span><span class="item-price">$8</span></div>
+              <div class="menu-row"><span class="item-name">Garlic Herb Chicken</span><span class="item-price">$8</span></div>
+              <div class="menu-row"><span class="item-name">Bacon Lardon</span><span class="item-price">$6</span></div>
+              <div class="menu-row"><span class="item-name">Mushrooms</span><span class="item-price">$7</span></div>
+              <div class="menu-row"><span class="item-name">Sauteed Onions</span><span class="item-price">$7</span></div>
+            </div>
+
+            <p class="menu-disclaimer">*These items may be served raw or under-cooked, or contain raw or under-cooked ingredients. Consuming raw or under-cooked meats, poultry, seafood, shellfish or eggs may increase your risk of food-borne illness.</p>
+            <p class="menu-disclaimer">20% gratuity added to parties of 5+ and unsigned credit card slips. Apple Pay and Tap to Pay not accepted. Table time limits: 1.5 hours (parties 1-4), 2 hours (5+). Our facility works with milk, egg, fish, shellfish, tree nuts, peanuts, wheat, soy, and sesame.</p>
+
+            <h3 class="menu-category">Dessert</h3>
+            <div class="menu-list">
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Moon Pie</span><span class="item-price">$10</span></div>
+                <p class="item-desc">Milk Chocolate Shell, Creamy Vanilla Mousse, Chocolate Ganache</p>
+              </div>
+              <div class="menu-row"><span class="item-name">Chef's Rotating GF Dessert</span><span class="item-price">$10</span></div>
+              <div class="menu-row"><span class="item-name">Carrot Cake</span><span class="item-price">$10</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COCKTAILS -->
+      <div class="menu-panel" id="cocktails">
+        <div class="card-flourish">
+          <span class="flourish-line"></span>
+          <span class="flourish-diamond"></span>
+          <span class="flourish-line"></span>
+        </div>
+        <div class="menu-columns">
+          <div class="menu-col reveal">
+            <h3 class="menu-category">Seasonal Cocktails</h3>
+            <div class="menu-list">
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Lavender Refresher</span><span class="item-price">$6</span></div>
+                <p class="item-desc">Lavender No-jito (Mocktail)</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Blackberry Ember</span><span class="item-price">$15</span></div>
+                <p class="item-desc">Captain Morgan, Maple, Cinnamon, Lemon, Blackberry</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Pom Royal</span><span class="item-price">$15</span></div>
+                <p class="item-desc">Pomegranate Liquor, Lime and your choice of Codigo Reposado or Ghost Tequila</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Violette Spritz</span><span class="item-price">$15</span></div>
+                <p class="item-desc">Dog Violette, Elder-flower, Bubbles</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">You're a Peach</span><span class="item-price">$15</span></div>
+                <p class="item-desc">Aperol, Vanilla Vodka, Peach, OJ, Bubbles</p>
+              </div>
+            </div>
+
+            <h3 class="menu-category">Cocktails</h3>
+            <div class="menu-list">
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">The White Rabbit</span><span class="item-price">$16</span></div>
+                <p class="item-desc">Our Signature Martini: Vanilla Vodka, Coconut Rum, and a Dash of Cream, Topped with a Flaming Marshmallow</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Cherry Limeade</span><span class="item-price">$14</span></div>
+                <p class="item-desc">It's Like a Sweet Tart That Gets You Drunk</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Pear Martini</span><span class="item-price">$14</span></div>
+                <p class="item-desc">Sublime Lovely Yumminess</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Purple Drank</span><span class="item-price">$14</span></div>
+                <p class="item-desc">Some Drank, Some Purple, All Good</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">The Duchess</span><span class="item-price">$14</span></div>
+                <p class="item-desc">An Elegant Champagne-Grapefruit Cocktail with Your Choice of Gin, Vodka, or Tequila</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Euphoria</span><span class="item-price">$14</span></div>
+                <p class="item-desc">Breckenridge Gin, Yellow Chartreuse, Lemon</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">The Red Queen</span><span class="item-price">$15</span></div>
+                <p class="item-desc">A Cherry Amaretto Sour with a Juicy Red Wine Float</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Blush</span><span class="item-price">$15</span></div>
+                <p class="item-desc">Cucumber Vodka, Elder flower and Citrus, Youth Potion in a Glass</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">"T" Party</span><span class="item-price">$15</span></div>
+                <p class="item-desc">Cazadores Silver Tequila, Coconut Rum, Grapefruit Juice, a Wonderland Margarita</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Gryphon</span><span class="item-price">$15</span></div>
+                <p class="item-desc">Mostly Bitter, Splash of Sweet, If you like Mezcal, you'll like me</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Rusty Knees</span><span class="item-price">$15</span></div>
+                <p class="item-desc">Buffalo Trace, Drambuie, Chartreuse, Lemon, Honey</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Tweedle Dum</span><span class="item-price">$14</span></div>
+                <p class="item-desc">Fireball Cinnamon Whisky, Honey, Lemon, Ginger Beer, Bitters</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Mr. Time's Sazerac</span><span class="item-price">$19</span></div>
+                <p class="item-desc">America's Oldest Cocktail Mixed with Angel's Envy Rye</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">"Espresso" Ol' Fashion</span><span class="item-price">$17</span></div>
+                <p class="item-desc">Buffalo Trace, Borghetti, Cocoa Bitters</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">"Espresso" Martini</span><span class="item-price">$15</span></div>
+                <p class="item-desc">Vodka, Local Lebowski's Coffee Liqueur, Topped with STIR Espresso Beans — Choose Regular or Creamy</p>
+              </div>
+            </div>
+          </div>
+          <div class="menu-col reveal">
+            <h3 class="menu-category">Mocktails</h3>
+            <div class="menu-list">
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Hoptail Mocktail</span><span class="item-price">$6</span></div>
+                <p class="item-desc">Sweet Berry, Refreshing Lemon &amp; Luxardo Cherry</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Mock Turtle</span><span class="item-price">$6</span></div>
+                <p class="item-desc">A Tequila Sunrise with No Hangover</p>
+              </div>
+              <div class="menu-row detailed">
+                <div class="item-top"><span class="item-name">Honey Bee</span><span class="item-price">$6</span></div>
+                <p class="item-desc">Bubbles, Honey, Ginger, Citrus</p>
+              </div>
+            </div>
+
+            <h3 class="menu-category">Classic Cocktails</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Manhattan</span><span class="item-price">$16</span></div>
+              <div class="menu-row"><span class="item-name">Ol' Fashioned</span><span class="item-price">$15</span></div>
+              <div class="menu-row"><span class="item-name">Paper Plane</span><span class="item-price">$15</span></div>
+              <div class="menu-row"><span class="item-name">Aviation</span><span class="item-price">$15</span></div>
+              <div class="menu-row"><span class="item-name">Last Word</span><span class="item-price">$15</span></div>
+              <div class="menu-row"><span class="item-name">Mojito</span><span class="item-price">$14</span></div>
+            </div>
+
+            <h3 class="menu-category">Dessert Pairings</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Dow's 10 Yr. Tawny Port</span><span class="item-price">$11</span></div>
+              <div class="menu-row"><span class="item-name">Cazadores Cafe'</span><span class="item-price">$11</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEER -->
+      <div class="menu-panel" id="beer">
+        <div class="card-flourish">
+          <span class="flourish-line"></span>
+          <span class="flourish-diamond"></span>
+          <span class="flourish-line"></span>
+        </div>
+        <div class="menu-columns">
+          <div class="menu-col reveal">
+            <h3 class="menu-category">Colorado Beers <span class="cat-note">$7.50</span></h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Avery White Rascal</span></div>
+              <div class="menu-row"><span class="item-name">Odell IPA</span></div>
+              <div class="menu-row"><span class="item-name">Odell Lagerado</span></div>
+              <div class="menu-row"><span class="item-name">Left Hand Nitro Milk Stout</span></div>
+              <div class="menu-row"><span class="item-name">Odell Pilsner</span></div>
+              <div class="menu-row"><span class="item-name">Denver Beer Co. Princess Yum Yum</span></div>
+              <div class="menu-row"><span class="item-name">Venga, Mexican Lager</span></div>
+              <div class="menu-row"><span class="item-name">Dry Dock Apricot Sour</span></div>
+            </div>
+
+            <h3 class="menu-category">Draft</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Coors Banquet</span><span class="item-price">$7</span></div>
+              <div class="menu-row"><span class="item-name">Voodoo Haze IPA</span><span class="item-price">$8</span></div>
+              <div class="menu-row"><span class="item-name">Bristol Red-Ale</span><span class="item-price">$8</span></div>
+            </div>
+
+            <h3 class="menu-category">Specialty <span class="cat-note">$9</span></h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Odell Myrcenary Double IPA</span></div>
+              <div class="menu-row"><span class="item-name">Left Hand St Vrain Tripel Ale</span></div>
+            </div>
+          </div>
+          <div class="menu-col reveal">
+            <h3 class="menu-category">Domestic &amp; Imports</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">PBR</span><span class="item-price">$5</span></div>
+              <div class="menu-row"><span class="item-name">Bud Light</span><span class="item-price">$6</span></div>
+              <div class="menu-row"><span class="item-name">Coors Light</span><span class="item-price">$6</span></div>
+              <div class="menu-row"><span class="item-name">Stella Artois</span><span class="item-price">$7.50</span></div>
+              <div class="menu-row"><span class="item-name">Designated Dales (N/A)</span><span class="item-price">$7</span></div>
+              <div class="menu-row"><span class="item-name">Athletic (N/A)</span><span class="item-price">$7</span></div>
+              <div class="menu-row"><span class="item-name">STEM Off Dry Hard Cider</span><span class="item-price">$8</span></div>
+              <div class="menu-row"><span class="item-name">High Noon Pineapple Seltzer</span><span class="item-price">$7</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WINE -->
+      <div class="menu-panel" id="wine">
+        <div class="card-flourish">
+          <span class="flourish-line"></span>
+          <span class="flourish-diamond"></span>
+          <span class="flourish-line"></span>
+        </div>
+        <div class="menu-columns">
+          <div class="menu-col reveal">
+            <h3 class="menu-category">Bubbly</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Zonin, Prosecco</span><span class="item-price">$9 / $32</span></div>
+              <div class="menu-row"><span class="item-name">Lionne Royal Brut (France)</span><span class="item-price">$90</span></div>
+            </div>
+
+            <h3 class="menu-category">Whites</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">House White, Chardonnay</span><span class="item-price">$10 / $34</span></div>
+              <div class="menu-row"><span class="item-name">La Crema, Chardonnay</span><span class="item-price">$13 / $48</span></div>
+              <div class="menu-row"><span class="item-name">Crowded House, Sauvignon Blanc</span><span class="item-price">$12 / $46</span></div>
+              <div class="menu-row"><span class="item-name">Luna Nuda, Pinot Grigio</span><span class="item-price">$12 / $46</span></div>
+              <div class="menu-row"><span class="item-name">Primo Amore, Moscato</span><span class="item-price">$12 / $46</span></div>
+              <div class="menu-row"><span class="item-name">A to Z, Rosé</span><span class="item-price">$12 / $46</span></div>
+            </div>
+          </div>
+          <div class="menu-col reveal">
+            <h3 class="menu-category">Reds</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">House Red, Cabernet Sauvignon</span><span class="item-price">$10 / $34</span></div>
+              <div class="menu-row"><span class="item-name">Gold Sweet Red, Roscato</span><span class="item-price">$12 / $46</span></div>
+              <div class="menu-row"><span class="item-name">Earthquake, Red Zinfandel</span><span class="item-price">$12 / $46</span></div>
+              <div class="menu-row"><span class="item-name">Daou, Cabernet Sauvignon</span><span class="item-price">$15 / $56</span></div>
+              <div class="menu-row"><span class="item-name">Piattelli, Malbec</span><span class="item-price">$11 / $40</span></div>
+              <div class="menu-row"><span class="item-name">Triens, Tempranillo</span><span class="item-price">$17 / $65</span></div>
+              <div class="menu-row"><span class="item-name">Underwood, Pinot Noir</span><span class="item-price">$12 / $46</span></div>
+              <div class="menu-row"><span class="item-name">12 Knights, Red Blend</span><span class="item-price">$12 / $46</span></div>
+              <div class="menu-row"><span class="item-name">Pessimist, Red Blend</span><span class="item-price">$17 / $65</span></div>
+              <div class="menu-row"><span class="item-name">Sequoia Grove Cabernet</span><span class="item-price">$120</span></div>
+              <div class="menu-row"><span class="item-name">Stoke's Ghost, Petite Syrah</span><span class="item-price">$75</span></div>
+              <div class="menu-row"><span class="item-name">Orin Swift "Machete"</span><span class="item-price">$90</span></div>
+              <div class="menu-row"><span class="item-name">Orin Swift "Papillon"</span><span class="item-price">$125</span></div>
+              <div class="menu-row"><span class="item-name">Orin Swift "Palermo"</span><span class="item-price">$142</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPIRITS -->
+      <div class="menu-panel" id="spirits">
+        <div class="card-flourish">
+          <span class="flourish-line"></span>
+          <span class="flourish-diamond"></span>
+          <span class="flourish-line"></span>
+        </div>
+        <div class="menu-columns">
+          <div class="menu-col reveal">
+            <h3 class="menu-category">Whiskey</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Breckenridge Single Barrel LE</span><span class="item-price">$56</span></div>
+              <div class="menu-row"><span class="item-name">Rabbit Hole Reserve Breckenridge</span><span class="item-price">$13</span></div>
+              <div class="menu-row"><span class="item-name">Rabbit Hole Rye</span><span class="item-price">$16</span></div>
+              <div class="menu-row"><span class="item-name">Buffalo Trace</span><span class="item-price">$16</span></div>
+              <div class="menu-row"><span class="item-name">291</span><span class="item-price">$14</span></div>
+              <div class="menu-row"><span class="item-name">291 Rye</span><span class="item-price">$16</span></div>
+              <div class="menu-row"><span class="item-name">Woodford Reserve</span><span class="item-price">$16</span></div>
+              <div class="menu-row"><span class="item-name">Jefferson's Ocean</span><span class="item-price">$19</span></div>
+              <div class="menu-row"><span class="item-name">Elijah Craig Rye</span><span class="item-price">$16</span></div>
+              <div class="menu-row"><span class="item-name">Angels Envy Rye</span><span class="item-price">$18</span></div>
+            </div>
+
+            <h3 class="menu-category">Scotch</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Glenlivet 12 yr.</span><span class="item-price">$16</span></div>
+              <div class="menu-row"><span class="item-name">JW Black Label</span><span class="item-price">$16</span></div>
+              <div class="menu-row"><span class="item-name">Oban</span><span class="item-price">$19</span></div>
+              <div class="menu-row"><span class="item-name">Macallan 12 yr.</span><span class="item-price">$17</span></div>
+              <div class="menu-row"><span class="item-name">Lagavulin</span><span class="item-price">$25</span></div>
+              <div class="menu-row"><span class="item-name">Balvenie</span><span class="item-price">$20</span></div>
+              <div class="menu-row"><span class="item-name">Dewars</span><span class="item-price">$14</span></div>
+            </div>
+
+            <h3 class="menu-category">Cognac</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Cognac Park</span><span class="item-price">$11</span></div>
+              <div class="menu-row"><span class="item-name">Hennessy</span><span class="item-price">$18</span></div>
+              <div class="menu-row"><span class="item-name">D'usse</span><span class="item-price">$27</span></div>
+            </div>
+          </div>
+          <div class="menu-col reveal">
+            <h3 class="menu-category">Gin</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Bombay Sapphire</span><span class="item-price">$13</span></div>
+              <div class="menu-row"><span class="item-name">Hendricks</span><span class="item-price">$13</span></div>
+              <div class="menu-row"><span class="item-name">Nolet's</span><span class="item-price">$12</span></div>
+              <div class="menu-row"><span class="item-name">Breckenridge Gin</span><span class="item-price">$10</span></div>
+            </div>
+
+            <h3 class="menu-category">Rum</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Don Q</span><span class="item-price">$10</span></div>
+              <div class="menu-row"><span class="item-name">Bacardi</span><span class="item-price">$10</span></div>
+              <div class="menu-row"><span class="item-name">Bacardi Limon</span><span class="item-price">$10</span></div>
+              <div class="menu-row"><span class="item-name">Myers Dark Rum</span><span class="item-price">$10</span></div>
+              <div class="menu-row"><span class="item-name">Captain Morgan</span><span class="item-price">$12</span></div>
+            </div>
+
+            <h3 class="menu-category">Vodka</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Sun Peak (Local)</span><span class="item-price">$12</span></div>
+              <div class="menu-row"><span class="item-name">Grey Goose</span><span class="item-price">$14</span></div>
+              <div class="menu-row"><span class="item-name">Kettle One</span><span class="item-price">$13</span></div>
+              <div class="menu-row"><span class="item-name">Breckenridge Pear</span><span class="item-price">$10</span></div>
+              <div class="menu-row"><span class="item-name">Titos</span><span class="item-price">$12</span></div>
+              <div class="menu-row"><span class="item-name">Breckenridge Vodka</span><span class="item-price">$10</span></div>
+              <div class="menu-row"><span class="item-name">Pearl (Rotating Flavors)</span><span class="item-price">$9</span></div>
+            </div>
+
+            <h3 class="menu-category">Tequila</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">El Alto Patron, Reposado</span><span class="item-price">$45</span></div>
+              <div class="menu-row"><span class="item-name">Cazadores, Silver</span><span class="item-price">$12</span></div>
+              <div class="menu-row"><span class="item-name">Codigo, Anejo</span><span class="item-price">$14</span></div>
+              <div class="menu-row"><span class="item-name">Codigo, Reposado</span><span class="item-price">$14</span></div>
+              <div class="menu-row"><span class="item-name">Lalo</span><span class="item-price">$15</span></div>
+              <div class="menu-row"><span class="item-name">Ghost (Spicy)</span><span class="item-price">$12</span></div>
+            </div>
+
+            <h3 class="menu-category">Mezcal</h3>
+            <div class="menu-list">
+              <div class="menu-row"><span class="item-name">Illegal</span><span class="item-price">$12</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Gallery</p>
+        <h2>Step Into Our World</h2>
+      </div>
+      <div class="gallery-mosaic">
+        <div class="gallery-item gi-1 reveal" data-title="The Bar">
+          <div class="gallery-inner"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80&fit=crop" alt="The Bar"></div>
+          <div class="gallery-caption"><h3>The Bar</h3><p>Craft cocktails in candlelight</p></div>
+        </div>
+        <div class="gallery-item gi-2 reveal" data-title="Main Dining">
+          <div class="gallery-inner"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80&fit=crop" alt="Main Dining"></div>
+          <div class="gallery-caption"><h3>Main Dining</h3><p>Gothic elegance underground</p></div>
+        </div>
+        <div class="gallery-item gi-3 reveal" data-title="Plated Art">
+          <div class="gallery-inner"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&fit=crop" alt="Plated Art"></div>
+          <div class="gallery-caption"><h3>Plated Art</h3><p>Culinary masterpieces</p></div>
+        </div>
+        <div class="gallery-item gi-4 reveal" data-title="The Lounge">
+          <div class="gallery-inner"><img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=600&q=80&fit=crop" alt="The Lounge"></div>
+          <div class="gallery-caption"><h3>The Lounge</h3><p>Velvet &amp; whispers</p></div>
+        </div>
+        <div class="gallery-item gi-5 reveal" data-title="Private Events">
+          <div class="gallery-inner"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80&fit=crop" alt="Private Events"></div>
+          <div class="gallery-caption"><h3>Private Events</h3><p>Celebrations in wonderland</p></div>
+        </div>
+        <div class="gallery-item gi-6 reveal" data-title="The Entrance">
+          <div class="gallery-inner"><img src="https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=600&q=80&fit=crop" alt="The Entrance"></div>
+          <div class="gallery-caption"><h3>The Entrance</h3><p>Down the rabbit hole</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section class="awards" id="awards">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Recognition</p>
+        <h2>Awards & Accolades</h2>
+      </div>
+      <div class="awards-grid">
+        <div class="award-card reveal">
+          <div class="award-medal gold">GOLD</div>
+          <h3>Best Upscale Bar</h3>
+          <p>Best of Colorado Springs</p>
+        </div>
+        <div class="award-card reveal">
+          <div class="award-medal gold">GOLD</div>
+          <h3>Best Late Night Dining</h3>
+          <p>Best of Colorado Springs</p>
+        </div>
+        <div class="award-card reveal">
+          <div class="award-medal gold">GOLD</div>
+          <h3>Best Overall Bar</h3>
+          <p>Best of Colorado Springs</p>
+        </div>
+        <div class="award-card reveal">
+          <div class="award-medal silver">SILVER</div>
+          <h3>Best Overall Restaurant</h3>
+          <p>Best of Colorado Springs</p>
+        </div>
+        <div class="award-card reveal">
+          <div class="award-medal silver">SILVER</div>
+          <h3>Best Fine Dining</h3>
+          <p>Best of Colorado Springs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tagline Divider -->
+  <section class="parallax-divider parallax-2" id="press">
+    <div class="parallax-overlay"></div>
+    <blockquote class="parallax-quote reveal">
+      Wonderland of the Springs
+    </blockquote>
+  </section>
+
+  <!-- Reservations -->
+  <section class="reservations" id="reservations">
+    <div class="container">
+      <div class="reservations-wrapper">
+        <div class="reservations-info reveal">
+          <p class="section-label">Reservations</p>
+          <h2>Reserve Your Descent</h2>
+          <p>Reservation times fill up quickly, so we recommend making a reservation 2 weeks in advance. If you have a party larger than 4 people, please call the restaurant to reserve your spot.</p>
+          <div class="res-details">
+            <div class="res-detail">
+              <h4>Hours</h4>
+              <p>Daily: 4:00 PM — 10:30 PM</p>
+            </div>
+            <div class="res-detail">
+              <h4>Large Parties</h4>
+              <p>Call (719) 203-5072</p>
+            </div>
+          </div>
+        </div>
+        <form class="res-form reveal" id="resForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="resName">Full Name</label>
+              <input type="text" id="resName" required>
+            </div>
+            <div class="form-group">
+              <label for="resEmail">Email</label>
+              <input type="email" id="resEmail" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="resDate">Date</label>
+              <input type="date" id="resDate" required>
+            </div>
+            <div class="form-group">
+              <label for="resTime">Time</label>
+              <select id="resTime" required>
+                <option value="">Select time...</option>
+                <option>4:00 PM</option>
+                <option>4:30 PM</option>
+                <option>5:00 PM</option>
+                <option>5:30 PM</option>
+                <option>6:00 PM</option>
+                <option>6:30 PM</option>
+                <option>7:00 PM</option>
+                <option>7:30 PM</option>
+                <option>8:00 PM</option>
+                <option>8:30 PM</option>
+                <option>9:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="resGuests">Guests</label>
+              <select id="resGuests" required>
+                <option value="">Party size...</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="resPhone">Phone</label>
+              <input type="tel" id="resPhone">
+            </div>
+          </div>
+          <div class="form-group full-width">
+            <label for="resNotes">Special Requests</label>
+            <textarea id="resNotes" rows="3" placeholder="Dietary needs, celebrations, seating preferences..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Request Reservation</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Find Us -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3>Location</h3>
+          <p>101 North Tejon Street<br>Colorado Springs, CO 80903</p>
+          <p class="contact-note">Entrance located on Kiowa.</p>
+        </div>
+        <div class="contact-card reveal">
+          <h3>Hours</h3>
+          <p>Open Daily<br>4:00 PM — 10:30 PM</p>
+        </div>
+        <div class="contact-card reveal">
+          <h3>Contact</h3>
+          <p>Phone: (719) 203-5072</p>
+          <p>Email: rabbitholedinner@gmail.com</p>
+        </div>
+        <div class="contact-card reveal">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/rabbitholedinneranddrinks/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/therabbithole719/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo"><img src="logo.png" alt="The Rabbit Hole" class="footer-logo-img"></div>
+        <div class="footer-links">
+          <a href="https://rabbitholedinner.cardfoundry.com/giftcards.php" target="_blank" rel="noopener">Gift Cards</a>
+          <a href="https://www.facebook.com/rabbitholedinneranddrinks/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/therabbithole719/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 The Rabbit Hole. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
