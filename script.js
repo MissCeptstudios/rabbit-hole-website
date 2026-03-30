@@ -122,6 +122,8 @@ function setupPageEdges() {
   }
 }
 
+let menuHasOpened = false;
+
 function flipToTab(newIndex) {
   if (isFlipping || newIndex === currentTabIndex) return;
   if (newIndex < 0 || newIndex >= tabList.length) return;
@@ -134,14 +136,18 @@ function flipToTab(newIndex) {
   // Remove edge zones
   document.querySelectorAll('.page-edge').forEach(el => el.remove());
 
-  // Animate old page out
-  oldPanel.classList.add(goingForward ? 'page-turn-forward' : 'page-turn-backward');
+  // Slide old panel out
+  const outClass = goingForward ? 'slide-out-left' : 'slide-out-right';
+  const inClass = goingForward ? 'slide-in-right' : 'slide-in-left';
+  oldPanel.classList.add(outClass);
 
-  // After animation (700ms) — swap panels
+  // After old panel slides out — swap
   setTimeout(() => {
-    oldPanel.classList.remove('active', 'page-turn-forward', 'page-turn-backward');
+    oldPanel.classList.remove('active', outClass);
 
-    newPanel.classList.add('active', 'page-settle');
+    // Mark that menu has been interacted with — no more unfold
+    menuHasOpened = true;
+    newPanel.classList.add('active', inClass);
     tabs.forEach(t => t.classList.remove('active'));
     tabList[newIndex].classList.add('active');
     currentTabIndex = newIndex;
@@ -152,11 +158,11 @@ function flipToTab(newIndex) {
     });
 
     setTimeout(() => {
-      newPanel.classList.remove('page-settle');
+      newPanel.classList.remove(inClass);
       setupPageEdges();
       isFlipping = false;
-    }, 350);
-  }, 700);
+    }, 700);
+  }, 500);
 }
 
 // Tab clicks
@@ -164,7 +170,23 @@ tabs.forEach((tab, i) => {
   tab.addEventListener('click', () => flipToTab(i));
 });
 
-// Initial setup
+// Initial setup — unfold first card when menu section scrolls into view
+const menuSection = document.querySelector('.menu');
+const menuUnfoldObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const firstPanel = document.querySelector('.menu-panel.active');
+      if (firstPanel && !menuHasOpened) {
+        firstPanel.classList.add('menu-unfold');
+        // Remove unfold class after animation so it doesn't replay
+        setTimeout(() => firstPanel.classList.remove('menu-unfold'), 2000);
+      }
+      menuUnfoldObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+menuUnfoldObserver.observe(menuSection);
+
 setTimeout(setupPageEdges, 100);
 
 // ===== AUTO-NUDGE — teasing page turn if idle =====
